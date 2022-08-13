@@ -11,30 +11,29 @@
   background-position: center;
   text-align: center;
   padding: 200px 0;
+}
 
-  &__title {
-    color: var(--white-color);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: var(--letter-spacing-secondary);
-    text-transform: uppercase;
-    width: 696px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-  }
+.hero-title {
+  @include font(44px, 900, 60px);
+  color: var(--white-color);
 
-  &__button {
-    font-weight: var(--font-waight-bold);
-    font-size: var(--font-size-secondary);
-    line-height: 1.88;
-    letter-spacing: var(--letter-spacing-secondary);
-    transition: background-color var(--transition-duration) var(--transition-timing-function),
-      box-shadow var(--transition-duration) var(--transition-timing-function);
+  letter-spacing: var(--letter-spacing-secondary);
+  text-transform: uppercase;
+  width: 696px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
 
-    &:hover,
-    &:focus {
-      background-color: #188ce8;
-    }
+.hero__button {
+  font-weight: var(--font-waight-bold);
+  font-size: var(--font-size-secondary);
+  line-height: 1.88;
+  letter-spacing: var(--letter-spacing-secondary);
+  transition: background-color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
   }
 }

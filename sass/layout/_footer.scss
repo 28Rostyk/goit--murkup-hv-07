@@ -2,19 +2,19 @@
   background-color: var(--background-color-footer);
   padding-top: 60px;
   padding-bottom: 60px;
-
-  &__logo {
-    color: var(--white-color);
-  }
 }
 
-.footer-container {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
 
 .address-container {
   margin-right: 70px;
+}
+
+.footer__logo {
+  color: var(--white-color);
 }
 
 .logo__accent {
@@ -24,17 +24,17 @@
 .footer-address {
   margin-top: 20px;
   font-style: normal;
-
-  &__list {
-    line-height: 1.71;
-  }
 }
 
-.footer-address__list .footer-address__item:not(:last-child) {
+.address-list {
+  line-height: 1.71;
+}
+
+.address-list .address-list__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.footer-address__link {
+.address-list__link {
   color: var(--address-link-footer);
   text-decoration: none;
   transition: color var(--transition-duration) var(--transition-timing-function);
@@ -44,33 +44,30 @@
     color: var(--accent-text-color);
   }
 
-  &--active {
+  &_active {
     color: var(--white-color);
   }
 }
 
 .social-text {
+  @include font(14px, 700, 16px);
   color: var(--white-color);
-  font-weight: 700;
-  line-height: 1.14;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
 .footer-social {
   display: flex;
-
-  &__item:not(:last-child) {
-    margin-right: 10px;
-  }
 }
 
-.social-link {
-  display: flex;
+.footer-social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social__link {
+  @extend %align;
   width: 44px;
   height: 44px;
-  justify-content: center;
-  align-items: center;
   color: var(--white-color);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
@@ -81,10 +78,10 @@
   &:focus {
     background-color: var(--accent-text-color);
   }
+}
 
-  &__icon {
-    fill: currentColor;
-  }
+.footer-social__icon {
+  fill: currentColor;
 }
 
 .form-container {
@@ -92,8 +89,7 @@
 }
 
 .form-text {
-  line-height: 1.14;
-  font-weight: 700;
+  @include font(14px, 700, 16px);
   text-transform: uppercase;
   color: var(--white-color);
   margin-bottom: 20px;
@@ -111,8 +107,8 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    font-size: 16px;
-    line-height: 1.25;
+
+    @include font(16px, 400, 20px);
     letter-spacing: 0.03em;
     color: var(--white-color);
 
@@ -121,8 +117,7 @@
     }
 
     &::placeholder {
-      font-size: 16px;
-      line-height: 1.25;
+      @include font(16px, 400, 20px);
       letter-spacing: 0.03em;
       color: rgba(255, 255, 255, 0.6);
     }
@@ -132,9 +127,7 @@
 .footer-btn {
   display: flex;
   align-items: center;
-  font-size: 16px;
-  line-height: 1.87;
-  font-weight: 700;
+  @include font(16px, 700, 30px);
   letter-spacing: 0.06em;
   margin-left: 12px;
   transition: background-color var(--transition-duration) var(--transition-timing-function),

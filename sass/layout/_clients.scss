@@ -10,12 +10,10 @@
   }
 }
 
-.clients-link {
-  display: flex;
+.clients-list__link {
+  @extend %align;
   width: 170px;
   height: 92px;
-  justify-content: center;
-  align-items: center;
   color: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
@@ -27,8 +25,8 @@
     border: 1px solid var(--accent-text-color);
     color: var(--accent-text-color);
   }
+}
 
-  &__logo {
-    fill: currentColor;
-  }
+.clients-list__logo {
+  fill: currentColor;
 }
